@@ -1,4 +1,3 @@
-import Header from "../components/header/Header";
 import groupImg from "../assets/images/groupPhoto.png"
 import countImg from "../assets/images/counting.png";
 import mainServiceImg from "../assets/images/mainservice.png";
@@ -8,7 +7,6 @@ import styled from "styled-components";
 export default function DiaryPage() {
   return (
     <>
-      <Header />
       <MainContainer>
         <div>
           <Section>
@@ -103,9 +101,10 @@ border-radius: 15px;
 background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.20);
 
-position: absolute;
-top:2900px;
-left:300px
+  position: absolute;
+  top: 2500px; /* GroupImg와 맞춰 조절 */
+  left: 250px;
+  z-index: 2; /* 위로 올라오도록 설정 */
 
 `
 const PinkBox=styled.div`
@@ -130,31 +129,33 @@ line-height: 50px; /* 156.25% */
 position: relative;
 top:150px;
 left:545px;
+  z-index: 1;
 `
+
 const BlueBox = styled.div`
   width: 560px;
   height: 372.796px;
   transform: rotate(-6.485deg);
-  flex-shrink: 0;
   border-radius: 15px;
   background: #5A5DFF;
-  box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.20);
   color: #FEFEFE;
+  font-family: Pretendard;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 160px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: Pretendard;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 160px; /* 166.667% */
-
-  position: absolute; /* ← 여기 고침 */
-  top: 2000px;
-  left: 195px;
+  position: absolute;
+  top: 1700px; /* GroupImg와 맞춰 조절 */
+  left: 250px;
+  z-index: 2; /* 위로 올라오도록 설정 */
 `;
+
+
 
 const GroupImg = styled.img`
   width: 1016.477px;
@@ -162,9 +163,13 @@ const GroupImg = styled.img`
   display: block;
   filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
 
-    margin-top: 90px;
+  margin-top: 90px;
   margin-left: 600px;
+
+  position: relative;
+  z-index: 1;
 `;
+
 
 const GuestButton=styled.button`
 width: 367px;
@@ -204,34 +209,35 @@ font-weight: 900;
 line-height: 160px; /* 125% */
 
 positon :relative;
+z-index: 1; /* 밑에 깔리게 */
 `
-const GreenBox=styled.div`
-width: 884px;
-height: 451px;
-flex-shrink: 0;
-border-radius: 15px;
-background: #BEE317;
 
-display: flex;
+const GreenBox = styled.div`
+  width: 884px;
+  height: 451px;
+  border-radius: 15px;
+  background: #BEE317;
+  box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.20);
+  color: #151515;
+  font-family: Pretendard;
+  font-size: 88px;
+  font-weight: 900;
+  line-height: 120px;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 
-box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.20);
-color: #151515;
-font-family: Pretendard;
-font-size: 88px;
-font-style: normal;
-font-weight: 900;
-line-height: 120px; /* 136.364% */
+  position: absolute;
+  top: 500px;  /* YellowBox 위에서부터 100px 아래 */
+  left: 800px; /* 좌우 위치 조정 */
+  z-index: 2; /* 위에 겹치게 표시 */
+`;
 
-
-position: absolute;
-top: 867px;
-    left: 800px;
-`
 const MainContainer = styled.div`
   padding: 0px 100px 100px;
   background: #fff;
+  position: relative; 
 `;
 
 const Section = styled.div`

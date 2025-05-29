@@ -1,4 +1,3 @@
-import Header from "../components/header/Header";
 import dogImg from "../assets/images/dog.png"
 import frameImg from "../assets/images/framework.png"
 import kidImg from "../assets/images/kid.png"
@@ -13,7 +12,6 @@ import VectorImg from "../assets/images/VectorRed.png";
 export default function ProjectPage() {
   return (
     <>
-      <Header />
       <MainContainer>
 
         <Section>
