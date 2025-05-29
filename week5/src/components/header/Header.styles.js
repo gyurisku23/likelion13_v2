@@ -6,10 +6,11 @@ export const SearchWrapper = styled.div`
   width: 500px; /* 선택적으로 고정폭 설정 */
 `;
 
-
 export const ArrowButton = styled.button`
   position: absolute;
-  right: 5px;
+  left: 75%; /* input 왼쪽으로 이동 (원하는 위치로 조정) */
+  top: 50%;
+  transform: translateY(-50%);
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -18,9 +19,12 @@ export const ArrowButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 2;
 `;
 
-export const SearchSign=styled.img`
+export const SearchSign = styled.img`
   position: absolute;
   top: 50%;
   left: 12px;
@@ -28,7 +32,8 @@ export const SearchSign=styled.img`
   width: 25px;
   height: 25px;
   pointer-events: none;
-`
+  z-index: 1;
+`;
 
 export const ArrowIcon=styled.p`
 color: #1C1C1C;
@@ -53,7 +58,6 @@ flex-shrink: 0;
 border-radius: 100px;
 background: #1C1C1C;
 color: #FEFEFE;
-text-align: center;
 font-family: Pretendard;
 font-size: 14px;
 font-style: normal;
@@ -93,21 +97,33 @@ export const NavItem = styled.div`
   &.active.about {
     color: black;
     &::after {
-      font-weight: bold;
+      content: "";
+      display: block;
+      margin-top: 1px;
+      height: 4px;
+      background-color: #1C1C1C;;
     }
   }
 
   &.active.project {
     color: black;
     &::after {
-      font-weight: bold;
+      content: "";
+      display: block;
+      margin-top: 1px;
+      height: 4px;
+      background-color: #FF6D79;
     }
   }
   
   &.active.diary {
     color: black;
     &::after {
-      font-weight: bold;
+      content: "";
+      display: block;
+      margin-top: 1px;
+      height: 4px;
+      background-color: #01D354;
     }
   }
 `;

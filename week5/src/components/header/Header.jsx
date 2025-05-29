@@ -18,7 +18,6 @@ export default function Header() {
 
             <ArrowButton>
               <ArrowIcon>→</ArrowIcon>
-
             </ArrowButton>
 
           </SearchWrapper>

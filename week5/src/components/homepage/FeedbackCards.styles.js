@@ -30,8 +30,8 @@ font-style: normal;
 font-weight: 700;
 line-height: 65px; /* 125% */
 
-margin-top:30px;
-margin-bottom: 0px;
+margin-top: 5px;
+margin-bottom: 10px;
 
 `
 export const Text=styled.p`
@@ -72,8 +72,8 @@ font-size: 32px;
 font-style: normal;
 font-weight: 700;
 line-height: 65px;
-
-margin-bottom: 0px;
+margin-top:5px;
+margin-bottom: 5px;
 `
 export const ImageText=styled.p`
 color: #1C1C1C;
@@ -83,9 +83,9 @@ font-family: Pretendard;
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
-// line-height: 36px;
+line-height: 36px;
 
-margin-top:0px;
+margin-top:5px;
 `
 export const Thought=styled.p`
 font-family: Pretendard;
